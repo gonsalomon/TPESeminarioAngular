@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SitioMuebles": {
+    "de-buena-madera": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sitio-muebles",
+            "outputPath": "dist/de-buena-madera",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SitioMuebles:build:production"
+              "browserTarget": "de-buena-madera:build:production"
             },
             "development": {
-              "browserTarget": "SitioMuebles:build:development"
+              "browserTarget": "de-buena-madera:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SitioMuebles:build"
+            "browserTarget": "de-buena-madera:build"
           }
         },
         "test": {
