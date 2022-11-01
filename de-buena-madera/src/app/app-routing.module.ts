@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
-  {},
-  {},
-  {},
-  {path: '/', component: HomeComponent, pathMatch: 'full'}
+  {path: 'muebles', component: TableComponent, pathMatch: 'prefix'},
+  {path: 'categorias', component: TableComponent, pathMatch: 'prefix'},
+  {path: '', redirectTo: 'muebles', pathMatch: 'full'}
 ];
 
 @NgModule({
