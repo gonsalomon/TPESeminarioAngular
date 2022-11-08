@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JokeDataService } from './joke-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'boomer-jokes';
+
+  constructor(){
+    
+  }
+
+  showJoke(){
+  }
 }
