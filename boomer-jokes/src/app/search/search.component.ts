@@ -12,4 +12,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendQuery() : void{
+    
+  }
 }

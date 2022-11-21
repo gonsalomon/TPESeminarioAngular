@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./random.component.scss']
 })
 export class RandomComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  randomJoke : string;
+  constructor() {
+    this.randomJoke = "";
   }
 
+  ngOnInit(): void {
+    this.randomJoke = "";
+  }
+
+  function getRandomJoke() : void{
+    this.randomJoke = 
+  }
 }
