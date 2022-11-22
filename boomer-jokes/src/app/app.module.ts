@@ -8,6 +8,7 @@ import { RandomComponent } from './random/random.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
+import { SearchboxComponent } from './search/searchbox/searchbox.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     RandomComponent,
     NavComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    SearchboxComponent
   ],
   imports: [
     BrowserModule,

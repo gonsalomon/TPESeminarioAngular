@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Joke } from './joke';
 import { JokeDataService } from './joke-data.service';
 
 @Component({
@@ -7,12 +8,8 @@ import { JokeDataService } from './joke-data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'boomer-jokes';
+  title = 'Chuck Norris jokes!';
 
   constructor(){
-    
-  }
-
-  showJoke(){
   }
 }

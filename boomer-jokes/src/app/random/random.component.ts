@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Joke } from '../joke';
 
 @Component({
   selector: 'app-random',
@@ -6,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./random.component.scss']
 })
 export class RandomComponent implements OnInit {
-  randomJoke : string;
+  randomJoke : Joke;
+  @Input() receivedJoke: Joke;
+  
   constructor() {
-    this.randomJoke = "";
+    this.randomJoke = {icon_url:'', value:''};
+    this.receivedJoke = {icon_url: '', value: ''};
   }
 
   ngOnInit(): void {
-    this.randomJoke = "";
+    this.randomJoke = this.receivedJoke;
   }
 
-  function getRandomJoke() : void{
-    this.randomJoke = 
+  getRandomJoke(): Joke{
+    return {icon_url: '', value: ''};
   }
 }
