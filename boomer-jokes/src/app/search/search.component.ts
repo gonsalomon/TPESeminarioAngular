@@ -17,7 +17,7 @@ export class SearchComponent {
 
   //traigo chistes que contengan query y los vuelco en jokes
   searchJokes(query: string) : void{
-    console.log('Estoy buscando chistes que digan ' + query)
-    this.jokeService.searchJoke(query).subscribe()
+    let response = this.jokeService.searchJoke(query);
+    this.jokes = response;
   }
 }

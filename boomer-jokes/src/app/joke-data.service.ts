@@ -18,12 +18,16 @@ export class JokeDataService {
     return this.http.get<Joke>('https://'+this.joke_url+"/random");
   }
 
-  public searchJoke( query: string ): Observable<Joke[]>{
-    console.log('llamaron a searchJoke');
-    const result = this.http.get<Joke[]>(('https://'+this.joke_url+`/search?query=${query}`));
-    result.subscribe(joke=>{
-      console.log(joke);
-      console.log(typeof joke);
+  public searchJoke( query: string ): Joke[]{
+    const request = this.http.get<Joke[]>(('https://'+this.joke_url+`/search?query=${query}`));
+    let result: Joke[] = [];
+    request.subscribe((jokes: Joke[]|any)=>{
+      jokes.result.map((elem: Joke|any)=>{
+        result.push({
+          'icon_url':elem.icon_url,
+          'value': elem.value
+        })
+      })
     });
     return result;
   }

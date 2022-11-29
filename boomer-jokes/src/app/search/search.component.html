@@ -1,4 +1,4 @@
-<div *ngIf="this.jokes;then ask else show"></div>
+<div *ngIf="this.jokes.length==0;then ask else show"></div>
 <ng-template #ask>
     <p>Ingrese texto (en inglés porfa) que debería estar dentro de los chistes que se espera obtener.</p>
     <app-searchbox (submitQuery)="searchJokes($event)"></app-searchbox>
@@ -9,7 +9,7 @@
             <tr>Image</tr>
             <tr>Joke</tr>
         </thead>
-        <tbody>
+        <tbody class="d-flex flex-column">
             <td *ngFor="let joke of jokes">
                 <img src={{joke.icon_url}} alt="No hay Chuck :(">
                 <b><i>{{joke.value}}</i></b>
