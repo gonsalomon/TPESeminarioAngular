@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-searchbox',
@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchbox.component.scss']
 })
 export class SearchboxComponent implements OnInit {
+  @Output() submitQuery = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  sendQuery():void{
-    
+  sendQuery(query: string): void{
+    this.submitQuery.emit(query);
   }
 }

@@ -1,4 +1,5 @@
-<form>
-    <input placeholder="Inserte texto para buscar un chiste que lo contenga" name="query">
-    <button (click)="sendQuery()">Buscar</button>
+<form class="d-flex flex-column justify-content-around">
+    <i>Texto a buscar:</i>
+    <input #query placeholder="Inserte texto para buscar un chiste que lo contenga" name="query">
+    <button type="button" (click)="sendQuery(query.value)">Buscar</button>
 </form>
