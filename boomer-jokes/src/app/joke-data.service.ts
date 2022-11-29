@@ -10,9 +10,7 @@ import { Joke } from './joke';
 export class JokeDataService {
   private joke_url: string = "api.chucknorris.io/jokes";
   
-  constructor(private http: HttpClient) {
-    console.log('Se inicia el servicio');
-  }
+  constructor(private http: HttpClient) {}
   
   public randomJoke(): Observable<Joke>{
     return this.http.get<Joke>('https://'+this.joke_url+"/random");

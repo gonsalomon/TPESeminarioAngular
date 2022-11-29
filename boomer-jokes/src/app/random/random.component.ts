@@ -14,8 +14,7 @@ export class RandomComponent{
   }
 
   getRandomJoke(): void{
-    let observable = this.jokeService.randomJoke()
+    this.jokeService.randomJoke()
     .subscribe(joke => this.joke = joke);
-    console.log(this.joke);
   }
 }
